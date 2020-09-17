@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 22:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\bbs\settings.py:121
+msgid "Simplified Chinese"
+msgstr "中国語"
+
+#: .\bbs\settings.py:122
+msgid "English"
+msgstr "英語"
+
+#: .\bbs\settings.py:123
+msgid "Japanese"
+msgstr "日本語"
+
+#: .\home\models.py:15
+msgid "分类名"
+msgstr "カテゴリー"
+
+#: .\home\models.py:18
+msgid "上一级分类id"
+msgstr "親カテゴリー"
+
+#: .\home\models.py:27
+msgid "分类管理"
+msgstr "カテゴリー管理"
+
+#: .\home\models.py:34
+msgid "未审核"
+msgstr "未審査"
+
+#: .\home\models.py:35
+msgid "已审核"
+msgstr "審査済"
+
+#: .\home\models.py:36
+msgid "已下架"
+msgstr "削除済"
+
+#: .\home\models.py:38
+msgid "标题"
+msgstr "タイトル"
+
+#: .\home\models.py:39
+msgid "内容"
+msgstr "内容"
+
+#: .\home\models.py:40
+msgid "分类"
+msgstr "カテゴリー"
+
+#: .\home\models.py:41 .\home\models.py:69
+msgid "用户"
+msgstr "ユーザー"
+
+#: .\home\models.py:42
+msgid "发布日期"
+msgstr "投稿時間"
+
+#: .\home\models.py:43
+msgid "状态"
+msgstr "状態"
+
+#: .\home\models.py:44
+msgid "阅读量"
+msgstr "閲覧数"
+
+#: .\home\models.py:45
+msgid "评论量"
+msgstr "返信数"
+
+#: .\home\models.py:52
+msgid "文章管理"
+msgstr "文章管理"
+
+#: .\home\models.py:68
+msgid "评论文章id"
+msgstr "文章id"
+
+#: .\home\models.py:71
+msgid "留言时间"
+msgstr "返信時間"
+
+#: .\home\models.py:72
+msgid "回复内容"
+msgstr "返信内容"
+
+#: .\home\models.py:79
+msgid "回复管理"
+msgstr "返信管理"
+
+#: .\home\views.py:42
+msgid "宿題QA_ホーム"
+msgstr "宿題QA_ホーム"
+
+#: .\home\views.py:90
+msgid "宿題QA_リスト"
+msgstr "宿題QA_リスト"
+
+#: .\templates\404.html:40
+msgid "Oops!　お探しのページが見つかりません"
+msgstr ""
+
+#: .\templates\404.html:41
+msgid "ホームへ"
+msgstr ""
+
+#: .\templates\base.html:31 .\templates\base.html:39
+msgid "中国語"
+msgstr ""
+
+#: .\templates\base.html:32 .\templates\base.html:40
+msgid "日本語"
+msgstr ""
+
+#: .\templates\base.html:33 .\templates\base.html:41
+msgid "英語"
+msgstr ""
+
+#: .\templates\base.html:43
+msgid "選択"
+msgstr ""
+
+#: .\templates\base.html:47 .\templates\base.html:89
+msgid "宿題QA"
+msgstr "宿題QA"
+
+#: .\templates\base.html:53 .\templates\base.html:55 .\templates\detail.html:9
+#: .\templates\list.html:10 .\templates\publish.html:9
+#: .\templates\reply.html:10 .\templates\search.html:9
+msgid "ホーム"
+msgstr "ホーム"
+
+#: .\templates\base.html:63
+msgid "検索"
+msgstr ""
+
+#: .\templates\base.html:72
+msgid "ログアウト"
+msgstr ""
+
+#: .\templates\base.html:74 .\templates\login.html:14
+msgid "ログイン"
+msgstr ""
+
+#: .\templates\base.html:75 .\templates\register.html:19
+msgid "サインアップ"
+msgstr ""
+
+#: .\templates\detail.html:16 .\templates\detail.html:18
+#: .\templates\reply.html:13 .\templates\reply.html:17
+msgid "返信"
+msgstr ""
+
+#: .\templates\detail.html:36 .\templates\list.html:55
+#: .\templates\search.html:41
+msgid "閲覧数"
+msgstr ""
+
+#: .\templates\detail.html:36
+msgid "返信数"
+msgstr ""
+
+#: .\templates\detail.html:40
+msgid "投稿時間"
+msgstr ""
+
+#: .\templates\detail.html:41
+msgid "１さん"
+msgstr ""
+
+#: .\templates\detail.html:64
+msgid "返信時間"
+msgstr ""
+
+#: .\templates\detail.html:78 .\templates\list.html:70
+#: .\templates\search.html:56
+msgid "前へ"
+msgstr ""
+
+#: .\templates\detail.html:89 .\templates\list.html:81
+#: .\templates\search.html:67
+msgid "次へ"
+msgstr ""
+
+#: .\templates\index.html:6
+msgid "カテゴリー"
+msgstr ""
+
+#: .\templates\index.html:16
+msgid "フォローアップ"
+msgstr ""
+
+#: .\templates\index.html:21 .\templates\list.html:17
+msgid "今日"
+msgstr ""
+
+#: .\templates\index.html:22
+msgid "スレ"
+msgstr ""
+
+#: .\templates\list.html:18
+msgid "投稿数"
+msgstr ""
+
+#: .\templates\list.html:22 .\templates\list.html:24
+#: .\templates\publish.html:19
+msgid "投稿"
+msgstr ""
+
+#: .\templates\list.html:44 .\templates\search.html:30
+msgid "1さん"
+msgstr ""
+
+#: .\templates\list.html:46 .\templates\search.html:32
+msgid "最後の返信"
+msgstr ""
+
+#: .\templates\list.html:52 .\templates\search.html:38
+msgid "回答数"
+msgstr ""
+
+#: .\templates\list.html:87 .\templates\search.html:73
+msgid "人気スレ"
+msgstr ""
+
+#: .\templates\login.html:9 .\templates\register.html:9
+msgid "宿題QAへようこそ"
+msgstr ""
+
+#: .\templates\login.html:12 .\templates\register.html:13
+msgid "ユーザー"
+msgstr ""
+
+#: .\templates\login.html:13 .\templates\register.html:14
+msgid "パスワード"
+msgstr ""
+
+#: .\templates\publish.html:17
+msgid "タイトルを入力してください"
+msgstr ""
+
+#: .\templates\register.html:13 .\templates\register.html:14
+msgid "6-10文字"
+msgstr ""
+
+#: .\templates\register.html:13 .\templates\register.html:14
+msgid "英字と数字を組み合わせた文字列にしてください"
+msgstr ""
+
+#: .\templates\register.html:14
+msgid "英字の大文字と小文字は区別されます"
+msgstr ""
+
+#: .\templates\register.html:15
+msgid "パスワード確認"
+msgstr ""
+
+#: .\templates\register.html:15
+msgid "もう一度パスワードを入力してください"
+msgstr ""
+
+#: .\templates\register.html:16
+msgid "文字認証"
+msgstr ""
+
+#: .\templates\register.html:16
+msgid "文字コードを入力してください"
+msgstr ""
+
+#: .\templates\reply.html:13
+msgid "から投稿した"
+msgstr ""
+
+#: .\templates\test.html:43
+msgid "Select"
+msgstr "選択"
+
+#: .\templates\test.html:54
+msgid "Current language code"
+msgstr "現在言語"
+
+#: .\templates\test.html:55
+msgid "Welcome to our page"
+msgstr "ページへようこそ"
+
+#: .\templates\test.html:57
+#, python-format
+msgid " %(msg)s "
+msgstr ""
+
+#: .\templates\test.html:69
+msgid "Privacy & Cookie"
+msgstr ""
+
+#: .\templates\test.html:70
+msgid "Terms & Conditions"
+msgstr ""
+
+#: .\users\models.py:6
+msgid "用户名"
+msgstr "ユーザー名"
+
+#: .\users\models.py:7
+msgid "密码"
+msgstr "パスワード"
+
+#: .\users\models.py:8
+msgid "头像"
+msgstr "画像"
+
+#: .\users\models.py:15
+msgid "用户管理"
+msgstr "ユーザー管理"
+
+#: .\users\views.py:39
+msgid "パスワードが一致しませんでした。パスワードを入力し直してください。"
+msgstr ""
+
+#: .\users\views.py:42
+msgid "このユーザーは既に登録されています。"
+msgstr ""
+
+#: .\users\views.py:83
+msgid "Welcome to China"
+msgstr "中国へようこそ"

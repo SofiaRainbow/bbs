@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 22:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\bbs\settings.py:121
+msgid "Simplified Chinese"
+msgstr ""
+
+#: .\bbs\settings.py:122
+msgid "English"
+msgstr ""
+
+#: .\bbs\settings.py:123
+msgid "Japanese"
+msgstr ""
+
+#: .\home\models.py:15
+msgid "分类名"
+msgstr "category_name"
+
+#: .\home\models.py:18
+msgid "上一级分类id"
+msgstr "category_parent"
+
+#: .\home\models.py:27
+msgid "分类管理"
+msgstr "category management"
+
+#: .\home\models.py:34
+msgid "未审核"
+msgstr "unaudited"
+
+#: .\home\models.py:35
+msgid "已审核"
+msgstr "audited"
+
+#: .\home\models.py:36
+msgid "已下架"
+msgstr "removed"
+
+#: .\home\models.py:38
+msgid "标题"
+msgstr "title"
+
+#: .\home\models.py:39
+msgid "内容"
+msgstr "content"
+
+#: .\home\models.py:40
+msgid "分类"
+msgstr "category"
+
+#: .\home\models.py:41 .\home\models.py:69
+msgid "用户"
+msgstr "user"
+
+#: .\home\models.py:42
+msgid "发布日期"
+msgstr "post_time"
+
+#: .\home\models.py:43
+msgid "状态"
+msgstr "status"
+
+#: .\home\models.py:44
+msgid "阅读量"
+msgstr "views"
+
+#: .\home\models.py:45
+msgid "评论量"
+msgstr "replies"
+
+#: .\home\models.py:52
+msgid "文章管理"
+msgstr "article management"
+
+#: .\home\models.py:68
+msgid "评论文章id"
+msgstr "article_id"
+
+#: .\home\models.py:71
+msgid "留言时间"
+msgstr "reply_time"
+
+#: .\home\models.py:72
+msgid "回复内容"
+msgstr "reply_content"
+
+#: .\home\models.py:79
+msgid "回复管理"
+msgstr "reply management"
+
+#: .\home\views.py:42
+msgid "宿題QA_ホーム"
+msgstr "HomeworkHelp"
+
+#: .\home\views.py:90
+msgid "宿題QA_リスト"
+msgstr "HomeworkHelp"
+
+#: .\templates\404.html:40
+msgid "Oops!　お探しのページが見つかりません"
+msgstr "Sorry, the page you are looking for could not be found."
+
+#: .\templates\404.html:41
+msgid "ホームへ"
+msgstr "Home"
+
+#: .\templates\base.html:31 .\templates\base.html:39
+msgid "中国語"
+msgstr "Chinese"
+
+#: .\templates\base.html:32 .\templates\base.html:40
+msgid "日本語"
+msgstr "Japanese"
+
+#: .\templates\base.html:33 .\templates\base.html:41
+msgid "英語"
+msgstr "English"
+
+#: .\templates\base.html:43
+msgid "選択"
+msgstr "select"
+
+#: .\templates\base.html:47 .\templates\base.html:89
+msgid "宿題QA"
+msgstr "HomeworkHelp"
+
+#: .\templates\base.html:53 .\templates\base.html:55 .\templates\detail.html:9
+#: .\templates\list.html:10 .\templates\publish.html:9
+#: .\templates\reply.html:10 .\templates\search.html:9
+msgid "ホーム"
+msgstr "Home"
+
+#: .\templates\base.html:63
+msgid "検索"
+msgstr "search"
+
+#: .\templates\base.html:72
+msgid "ログアウト"
+msgstr "log out"
+
+#: .\templates\base.html:74 .\templates\login.html:14
+msgid "ログイン"
+msgstr "log in"
+
+#: .\templates\base.html:75 .\templates\register.html:19
+msgid "サインアップ"
+msgstr "sign up"
+
+#: .\templates\detail.html:16 .\templates\detail.html:18
+#: .\templates\reply.html:13 .\templates\reply.html:17
+msgid "返信"
+msgstr "reply"
+
+#: .\templates\detail.html:36 .\templates\list.html:55
+#: .\templates\search.html:41
+msgid "閲覧数"
+msgstr "views"
+
+#: .\templates\detail.html:36
+msgid "返信数"
+msgstr "replies"
+
+#: .\templates\detail.html:40
+msgid "投稿時間"
+msgstr "time of post"
+
+#: .\templates\detail.html:41
+msgid "１さん"
+msgstr "OP"
+
+#: .\templates\detail.html:64
+msgid "返信時間"
+msgstr "reply time"
+
+#: .\templates\detail.html:78 .\templates\list.html:70
+#: .\templates\search.html:56
+msgid "前へ"
+msgstr "Previous"
+
+#: .\templates\detail.html:89 .\templates\list.html:81
+#: .\templates\search.html:67
+msgid "次へ"
+msgstr "Next"
+
+#: .\templates\index.html:6
+msgid "カテゴリー"
+msgstr "Category"
+
+#: .\templates\index.html:16
+msgid "フォローアップ"
+msgstr "Follow up"
+
+#: .\templates\index.html:21 .\templates\list.html:17
+msgid "今日"
+msgstr "today"
+
+#: .\templates\index.html:22
+msgid "スレ"
+msgstr "threads"
+
+#: .\templates\list.html:18
+msgid "投稿数"
+msgstr "Threads"
+
+#: .\templates\list.html:22 .\templates\list.html:24
+#: .\templates\publish.html:19
+msgid "投稿"
+msgstr "Post"
+
+#: .\templates\list.html:44 .\templates\search.html:30
+msgid "1さん"
+msgstr "OP"
+
+#: .\templates\list.html:46 .\templates\search.html:32
+msgid "最後の返信"
+msgstr "Last Reply"
+
+#: .\templates\list.html:52 .\templates\search.html:38
+msgid "回答数"
+msgstr "replies"
+
+#: .\templates\list.html:87 .\templates\search.html:73
+msgid "人気スレ"
+msgstr "Popular Posts"
+
+#: .\templates\login.html:9 .\templates\register.html:9
+msgid "宿題QAへようこそ"
+msgstr "Welcome to Homework Help"
+
+#: .\templates\login.html:12 .\templates\register.html:13
+msgid "ユーザー"
+msgstr "user"
+
+#: .\templates\login.html:13 .\templates\register.html:14
+msgid "パスワード"
+msgstr "password"
+
+#: .\templates\publish.html:17
+msgid "タイトルを入力してください"
+msgstr "Please input the title"
+
+#: .\templates\register.html:13 .\templates\register.html:14
+msgid "6-10文字"
+msgstr "6-10 characters"
+
+#: .\templates\register.html:13 .\templates\register.html:14
+msgid "英字と数字を組み合わせた文字列にしてください"
+msgstr "Use characters with a mix of English letters and numbers."
+
+#: .\templates\register.html:14
+msgid "英字の大文字と小文字は区別されます"
+msgstr "Password are case sensitive."
+
+#: .\templates\register.html:15
+msgid "パスワード確認"
+msgstr "password confirm"
+
+#: .\templates\register.html:15
+msgid "もう一度パスワードを入力してください"
+msgstr "Please input the password again."
+
+#: .\templates\register.html:16
+msgid "文字認証"
+msgstr "verification code"
+
+#: .\templates\register.html:16
+msgid "文字コードを入力してください"
+msgstr "Please input the verification code."
+
+#: .\templates\reply.html:13
+msgid "から投稿した"
+msgstr "published"
+
+#: .\templates\test.html:43
+msgid "Select"
+msgstr ""
+
+#: .\templates\test.html:54
+msgid "Current language code"
+msgstr ""
+
+#: .\templates\test.html:55
+msgid "Welcome to our page"
+msgstr ""
+
+#: .\templates\test.html:57
+#, python-format
+msgid " %(msg)s "
+msgstr ""
+
+#: .\templates\test.html:69
+msgid "Privacy & Cookie"
+msgstr ""
+
+#: .\templates\test.html:70
+msgid "Terms & Conditions"
+msgstr ""
+
+#: .\users\models.py:6
+msgid "用户名"
+msgstr "username"
+
+#: .\users\models.py:7
+msgid "密码"
+msgstr "password"
+
+#: .\users\models.py:8
+msgid "头像"
+msgstr "photo"
+
+#: .\users\models.py:15
+msgid "用户管理"
+msgstr "user management"
+
+#: .\users\views.py:39
+msgid "パスワードが一致しませんでした。パスワードを入力し直してください。"
+msgstr "The passwords you entered do not match.Please reenter the passwords."
+
+#: .\users\views.py:42
+msgid "このユーザーは既に登録されています。"
+msgstr "This username already exists."
+
+#: .\users\views.py:83
+msgid "Welcome to China"
+msgstr ""

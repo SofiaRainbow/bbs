@@ -1,0 +1,95 @@
+{%extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/show.css"/>
+{% endblock css %}
+{% block main_content %}
+{% load i18n %}
+<div style="margin-top:55px;"></div>
+<div id="position" class="auto">
+    <a href='/{{request.session.language}}/home/'>{% trans 'ホーム'%}</a>
+    &gt; <a href='#'>{{article.category.name}}</a>
+     &gt;
+</div>
+<div id="main" class="auto">
+    <div class="wrap1">
+        {% if is_login %}
+        <a href="/{{request.session.language}}/reply/?article_id={{article.id}}" class="reply_btn">{% trans '返信'%}</a>
+        {% else %}
+        <a class="reply_btn" href="/{{request.session.language}}/user/login/">{% trans '返信'%}</a>
+        {% endif %}
+        <div style="clear:both;"></div>
+    </div>
+    <div class="wrapContent">
+        <div class="left">
+            <div class="face">
+                <a target="_blank" href="">
+                    <img width="100" height="100" src="/static/{{article.user.user_img}}"/>
+                </a>
+            </div>
+            <div class="name">
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <h2> {{article.title}}</h2>
+                <span>{% trans '閲覧数'%}：{{article.read_count}}&nbsp;|&nbsp;{% trans '返信数'%}：{{article.comments}}</span>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="pubdate">
+                <span class="date">{% trans '投稿時間'%}：{{article.publish_time}}</span>
+                <span class="floor" style="color:red;font-size:14px;font-weight:bold;">{% trans '１さん'%}</span>
+            </div>
+            <div class="content">
+                {{article.content}}
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    {% for reply in page_data%}
+    <div class="wrapContent">
+        <div class="left">
+            <div class="face">
+                <a target="_blank" data-uid="2374101" href="">
+                    <img width="80" height="80" src="/static/{{reply.user.user_img}}"/>
+                </a>
+            </div>
+            <div class="name">
+                <a class="J_user_card_show mr5" data-uid="2374101" href=""></a>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="pubdate">
+                <span class="date">{% trans '返信時間'%}：{{reply.r_time}}</span>
+                <span class="floor">{{reply.user.username}}&nbsp;</span>
+            </div>
+            <div class="content">
+                {{reply.r_content}}
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    {% endfor %}
+    <div class="wrap1">
+
+        <div class="pagenation">
+            {% if page_data.has_previous%}
+            <a href="?id={{article.id}}&amp;page={{page_data.previous_page_number}}">&lt; {% trans '前へ'%}</a>
+            {% endif %}
+            {% for index in paginator.page_range%}
+            {#判断当前循环到的是不是当前页面，如果是就高亮显示#}
+            {% if page_data.number == index%}
+            <a href="?id={{article.id}}&amp;page={{index}}" class="active">{{index}}</a>
+            {%else%}
+            <a href="?id={{article.id}}&amp;page={{index}}">{{index}}</a>
+            {%endif%}
+            {% endfor %}
+            {% if page_data.has_next%}
+            <a href="?id={{article.id}}&amp;page={{page_data.next_page_number}}">{% trans '次へ'%} &gt;</a>
+            {% endif %}
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+{% endblock main_content %}

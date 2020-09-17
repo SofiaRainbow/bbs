@@ -1,0 +1,87 @@
+{%extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/list.css"/>
+{% endblock css %}
+{% block main_content %}
+{% load i18n %}
+<div style="margin-top:55px;"></div>
+<div id="position" class="auto">
+    <a href='/home/'>{% trans 'ホーム'%}</a> &gt;
+</div>
+<div id="main" class="auto">
+    <div id="left">
+        <div class="box_wrap">
+        </div>
+        <div style="clear:both;"></div>
+        <ul class="postsList">
+
+            {% for article in page_data %}
+            <li>
+                <div class="smallPic">
+                    <a href="#">
+                        <img width="45" height="45" src="/static/{{article.user.user_img}}">
+                    </a>
+                </div>
+                <div class="subject">
+                    <div class="titleWrap">&nbsp;&nbsp;<h2>
+                        <a href="/{{request.session.language}}/detail/?id={{article.id}}&amp;page=1">{{article.title}}</a>
+                    </h2></div>
+                    <p>
+                        {% trans '1さん'%}：{{article.user.username}}&nbsp;{{article.publish_time}}&nbsp;&nbsp;&nbsp;&nbsp;
+                        {% if article.replies %}
+                        {% trans '最後の返信'%}：{{article.replies}}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="count">
+                    <p>
+                        {% trans '回答数'%}<br/><span>{{article.comments}}</span>
+                    </p>
+                    <p>
+                        {% trans '閲覧数'%}<br/><span>{{article.read_count}}</span>
+                    </p>
+                </div>
+
+                <div style="clear:both;"></div>
+            </li>
+            {% endfor %}
+
+        </ul>
+        <div class="pages_wrap">
+
+        </div>
+
+        <div class="pagenation">
+            {% if page_data.has_previous%}
+            <a href="?cat_id={{category.id}}&amp;page={{page_data.previous_page_number}}">&lt; {% trans '前へ'%}</a>
+            {% endif %}
+            {% for index in paginator.page_range%}
+            {#判断当前循环到的是不是当前页面，如果是就高亮显示#}
+            {% if page_data.number == index%}
+            <a href="?cat_id={{category.id}}&amp;page={{index}}" class="active">{{index}}</a>
+            {%else%}
+            <a href="?cat_id={{category.id}}&amp;page={{index}}">{{index}}</a>
+            {%endif%}
+            {% endfor %}
+            {% if page_data.has_next%}
+            <a href="?cat_id={{category.id}}&amp;page={{page_data.next_page_number}}">{% trans '次へ'%} &gt;</a>
+            {% endif %}
+        </div>
+    </div>
+    <div id="right">
+        <div class="classList">
+            <div class="title">{% trans '人気スレ'%}</div>
+            <ul class="listRight">
+                {% for article in popular %}
+                {% if article.comments > 0 and article.read_count > 0%}
+                <li><h3>
+                    <a href="/{{request.session.language}}/detail/?id={{article.id}}&amp;page=1">・{{article.title}}</a>
+                </h3></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+{% endblock main_content %}

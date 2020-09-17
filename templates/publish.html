@@ -1,0 +1,23 @@
+{%extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/publish.css"/>
+{% endblock css %}
+{% block main_content %}
+{% load i18n %}
+<div style="margin-top:55px;"></div>
+<div id="position" class="auto">
+    <a href='/home/'>{% trans 'ホーム'%}</a> &gt; <a href="/home/list/?cat_id={{category_id}}&amp;page=1">{{category_name}}</a>
+</div>
+<div id="publish">
+    <form action="{% url 'save_list' category_id %}" method="post">
+        {% csrf_token %}
+        <select name="category_id">
+            <option value="{{category_id}}" selected>{{category_name}}</option>
+        </select>
+        <input class="title" placeholder="{% trans 'タイトルを入力してください'%}" name="title" type="text"/>
+        <textarea name="content" class="content"></textarea>
+        <input class="reply_btn" type="submit" name="submit" value="{% trans '投稿'%}"/>
+        <div style="clear:both;"></div>
+    </form>
+</div>
+{% endblock main_content %}

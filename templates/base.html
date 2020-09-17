@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load i18n %}
+    <title> {{title}} </title>
+    <meta name="keywords" content="关键字列表"/>
+    <meta name="description" content="网页描述"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+    <!--script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script-->
+    <style>
+.pagenation{height:32px;text-align:center;font-size:0;margin:30px auto;}
+.pagenation a{display:inline-block;border:1px solid #d2d2d2;background-color:#f8f6f7;font-size:12px;padding:7px 10px;color:#666;margin:5px}
+.pagenation .active{background-color:#4682B4;color:#fff}
+    </style>
+    {% block css %}
+    {% endblock css %}
+</head>
+<body>
+
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <!--div class="col-md-2">
+                <a href="/zh-hans/home/" style="color:#333;">{% trans '中国語'%}</a>｜
+                <a href="/ja/home/" style="color:#333;">{% trans '日本語'%}</a>｜
+                <a href="/en/home/" style="color:#333;">{% trans '英語'%}</a>
+            </div-->
+            <div class="col-md-2">
+                <form action="{% url 'language_select' %}" method="post">
+                    {% csrf_token %}
+                    <select name="language_code">
+                        <option value="zh-hans" {%ifequal request.session.language 'zh-hans'%} selected {% endifequal %}>{% trans '中国語'%}</option>
+                        <option value="ja" {%ifequal request.session.language 'ja'%} selected {% endifequal %}>{% trans '日本語'%}</option>
+                        <option value="en" {%ifequal request.session.language 'en'%} selected {% endifequal %}>{% trans '英語'%}</option>
+                    </select>
+                    <input class="choose" type="submit" name="submit" value="{% trans '選択'%}" style="height:25px;font-size:11px;line-height:25px;padding:0 5px;"/>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <div class="logo">{% trans '宿題QA' %}</div>
+            </div>
+            <div class="col-md-1">
+                <div class="nav">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% if request.session.language %}
+                    <a class="hover" href="/{{request.session.language}}/home/">{% trans 'ホーム' %}</a>
+                    {% else %}
+                    <a class="hover" href="/{{LANGUAGE_CODE}}/home/">{% trans 'ホーム' %}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="serarch">
+                    <form method="post" action="{% url 'search_article'%}">
+                        {% csrf_token %}
+                        <input class="keyword" type="text" name="keyword" placeholder="{% trans '検索'%}"/>
+                        <input class="submit" type="submit" name="submit" value=""/>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="login">
+                    {% if is_login %}
+                    <a href="#">{{name}}</a>&nbsp;
+                        <a href="/{{request.session.language}}/user/login/">{% trans 'ログアウト'%}</a>
+                    {% else %}
+                        <a href='/{{request.session.language}}/user/login/'>{% trans 'ログイン'%}</a>&nbsp;
+                        <a href='/{{request.session.language}}/user/register/'>{% trans 'サインアップ'%}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block main_content %}
+{% endblock main_content %}
+
+<div id="footer" class="auto">
+    <div class="bottom">
+        <a>{% trans '宿題QA'%}</a>
+    </div>
+    <div class="copyright">Powered by Josetunen ©2020</div>
+</div>
+</body>
+</html>

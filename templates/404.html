@@ -1,0 +1,42 @@
+{%extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/show.css"/>
+<style>
+
+		.missing_pic{
+			display:block;
+			margin:70px auto 0px;
+		}
+		.tip{
+			text-align:center;
+			font-size:22px;
+			font-weight:bold;
+			color:#333;
+			margin-top:20px;
+		}
+		.back_to_index{
+			display:block;
+			width:130px;
+			line-height:30px;
+			border-radius:15px;
+			border:1px solid #488fcf;
+			background:#488fcf;
+			color:#fff;
+			text-align:center;
+			margin:20px auto 0;
+		}
+		.back_to_index:hover{
+			opacity:0.8;
+			text-decoration:none;
+		}
+
+</style>
+{% endblock css %}
+{% block main_content %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<div style="margin-top:55px;"></div>
+<img src="/static/image/404.png" alt="404" class="missing_pic">
+<h3 class="tip">{% trans 'Oops!　お探しのページが見つかりません'%}</h3>
+<a href="/{{request.session.language|default:LANGUAGE_CODE}}/home/" class="back_to_index">{% trans 'ホームへ'%}</a>
+{% endblock main_content %}

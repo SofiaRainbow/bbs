@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+{% block main_content %}
+{% load i18n %}
+	<div style="margin-top:55px;"></div>
+	<div id="hot" class="auto">
+		<div class="title">{% trans 'カテゴリー'%}</div>
+		<ul class="newslist">
+			{% for category in categories %}
+			<li><a>[{{ category.name}}]</a> <a>{{ category.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="box auto">
+		<div class="title">
+			{% trans 'フォローアップ'%}
+		</div>
+		<div class="classList">
+            {% for category in categories %}
+            <div class="childBox new mt-4">
+				<h2><a href="{% url 'list' %}?cat_id={{category.id}}&amp;page=1">{{ category.name}}</a> <span>({% trans '今日'%} {{ category.today}} )</span></h2>
+				{% trans 'スレ'%}：{{category.total}}<br />
+			</div>
+            {% endfor %}
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+{% endblock main_content %}
