@@ -33,7 +33,7 @@ body {
 	color:#666;
 }
 
-.header_wrap,.top{
+.header_wrap,.top,.container-fluid{
 	background:#488fce;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     display: block;
@@ -43,11 +43,11 @@ body {
     width: 100%;
     z-index: 10;
 }
-#header,.top{
+#header,.top,.container-fluid{
 	height:45px;
 	line-height:45px;
 }
-#header .logo ,.top .logo{
+#header .logo ,.top .logo,.container-fluid .logo{
 	width:100px;
 	font-size:20px;
 	font-family:'Arial';
@@ -55,7 +55,34 @@ body {
 	color:#fff;
 	float:left;
 }
-#header .nav a,.top .nav a{
+/*@media only screen and (max-width:1080px){*/
+/*    .top .logo{*/
+/*        width:60px;*/
+/*        font-size:14px;*/
+/*    }*/
+/*    .container-fluid{*/
+/*        padding-left:0px;*/
+/*        padding-right:0px;*/
+/*        margin:0px;*/
+/*        background-color:red;*/
+/*    }*/
+/*    .row{margin:0}*/
+/*    col-*-*{*/
+/*        padding:0;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width:992px) and (min-width:768px){*/
+/*    .container-fluid{*/
+/*@media only screen and (max-width:1200px) and (min-width:992px){*/
+/*    .container-fluid{*/
+/*        background-color:yellow;*/
+/*    }*/
+/*}*/
+/*        background-color:#488fce;*/
+/*    }*/
+/*}*/
+
+#header .nav a,.top .nav a,.container-fluid .nav a{
 	color:#fff;
 	display:block;
 	width:56px;
@@ -64,10 +91,10 @@ body {
 	font-size:14px;
 	cursor:pointer;
 }
-#header .nav a.hover,.top .nav a.hover{
+#header .nav a.hover,.top .nav a.hover,.container-fluid .nav a.hover{
 	background:#3b7fc4;
 }
-#header .serarch,.top .serarch {
+#header .serarch,.top .serarch,.container-fluid .serarch{
 	background: none repeat scroll 0 0 #f2f2f2;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
@@ -78,10 +105,10 @@ body {
     padding:0;
     width: 160px;
 }
-#header .serarch:hover, .top .serarch:hover {
+#header .serarch:hover, .top .serarch:hover,.container-fluid .serarch:hover{
 	background:#fff;
 }
-#header .serarch input.keyword, .top .serarch input.keyword{
+#header .serarch input.keyword, .top .serarch input.keyword,.container-fluid .serarch input.keyword{
 	width:130px;
 	height:20px;
 	margin:3px 0 0 5px;
@@ -89,7 +116,7 @@ body {
 	float:left;
 	border:0px;
 }
-#header .serarch input.submit, .top .serarch input.submit{
+#header .serarch input.submit, .top .serarch input.submit,.container-fluid .serarch input.submit{
 	background:url(../image/style_icon.png) 0px -593px;
     border: 0 none;
     cursor: pointer;
@@ -102,11 +129,11 @@ body {
     width: 25px;
     float:right;
 }
-#header .login,.top .login{
+#header .login,.top .login,.container-fluid .login{
 
 	width:300px;
 }
-#header .login a,.top .login a{
+#header .login a,.top .login a,.container-fluid a{
 	color:#fff;
 }
 a.btn {

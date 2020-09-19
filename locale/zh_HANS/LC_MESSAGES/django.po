@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 22:05+0900\n"
+"POT-Creation-Date: 2020-09-19 21:18+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\bbs\settings.py:121
+#: .\bbs\settings.py:134 .\bbs\settings2.py:122
 msgid "Simplified Chinese"
 msgstr "简体中文"
 
-#: .\bbs\settings.py:122
+#: .\bbs\settings.py:135 .\bbs\settings2.py:123
 msgid "English"
 msgstr "英语"
 
-#: .\bbs\settings.py:123
+#: .\bbs\settings.py:136 .\bbs\settings2.py:124
 msgid "Japanese"
 msgstr "日语"
 
@@ -110,7 +110,7 @@ msgstr "回复管理"
 msgid "宿題QA_ホーム"
 msgstr "线上答疑"
 
-#: .\home\views.py:90
+#: .\home\views.py:89
 msgid "宿題QA_リスト"
 msgstr "线上答疑"
 
@@ -122,45 +122,51 @@ msgstr "抱歉，你要找的页面不见了。"
 msgid "ホームへ"
 msgstr "返回首页"
 
-#: .\templates\base.html:31 .\templates\base.html:39
+#: .\templates\base.html:31 .\templates\base.html:39 .\templates\base2.html:41
+#: .\templates\base2.html:49
 msgid "中国語"
 msgstr "中文"
 
-#: .\templates\base.html:32 .\templates\base.html:40
+#: .\templates\base.html:32 .\templates\base.html:40 .\templates\base2.html:42
+#: .\templates\base2.html:50
 msgid "日本語"
 msgstr "日语"
 
-#: .\templates\base.html:33 .\templates\base.html:41
+#: .\templates\base.html:33 .\templates\base.html:41 .\templates\base2.html:43
+#: .\templates\base2.html:51
 msgid "英語"
 msgstr "英语"
 
-#: .\templates\base.html:43
+#: .\templates\base.html:43 .\templates\base2.html:53
 msgid "選択"
 msgstr "选择"
 
-#: .\templates\base.html:47 .\templates\base.html:89
+#: .\templates\base.html:47 .\templates\base.html:89 .\templates\base2.html:57
+#: .\templates\base2.html:99
 msgid "宿題QA"
 msgstr "线上答疑"
 
-#: .\templates\base.html:53 .\templates\base.html:55 .\templates\detail.html:9
-#: .\templates\list.html:10 .\templates\publish.html:9
-#: .\templates\reply.html:10 .\templates\search.html:9
+#: .\templates\base.html:53 .\templates\base.html:55 .\templates\base2.html:63
+#: .\templates\base2.html:65 .\templates\detail.html:9 .\templates\list.html:10
+#: .\templates\publish.html:9 .\templates\reply.html:10
+#: .\templates\search.html:9
 msgid "ホーム"
 msgstr "主页"
 
-#: .\templates\base.html:63
+#: .\templates\base.html:63 .\templates\base2.html:73
 msgid "検索"
 msgstr "检索"
 
-#: .\templates\base.html:72
+#: .\templates\base.html:72 .\templates\base2.html:82
 msgid "ログアウト"
 msgstr "退出"
 
-#: .\templates\base.html:74 .\templates\login.html:14
+#: .\templates\base.html:74 .\templates\base2.html:84 .\templates\login.html:14
 msgid "ログイン"
 msgstr "登录"
 
-#: .\templates\base.html:75 .\templates\register.html:19
+#: .\templates\base.html:75 .\templates\base2.html:85
+#: .\templates\register.html:19
 msgid "サインアップ"
 msgstr "注册"
 
@@ -200,19 +206,20 @@ msgstr "上一页"
 msgid "次へ"
 msgstr "下一页"
 
-#: .\templates\index.html:6
+#: .\templates\index.html:6 .\templates\index2.html:6
 msgid "カテゴリー"
 msgstr "目录"
 
-#: .\templates\index.html:16
+#: .\templates\index.html:16 .\templates\index2.html:16
 msgid "フォローアップ"
 msgstr "跟帖"
 
-#: .\templates\index.html:21 .\templates\list.html:17
+#: .\templates\index.html:21 .\templates\index2.html:21
+#: .\templates\list.html:17
 msgid "今日"
 msgstr "今天"
 
-#: .\templates\index.html:22
+#: .\templates\index.html:22 .\templates\index2.html:22
 msgid "スレ"
 msgstr "帖子"
 
