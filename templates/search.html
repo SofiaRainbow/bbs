@@ -4,9 +4,10 @@
 {% endblock css %}
 {% block main_content %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <div style="margin-top:55px;"></div>
 <div id="position" class="auto">
-    <a href='/home/'>{% trans 'ホーム'%}</a> &gt;
+    <a href='/{{request.session.language|default:LANGUAGE_CODE}}/home/'>{% trans 'ホーム'%}</a> &gt;
 </div>
 <div id="main" class="auto">
     <div id="left">
@@ -24,7 +25,7 @@
                 </div>
                 <div class="subject">
                     <div class="titleWrap">&nbsp;&nbsp;<h2>
-                        <a href="/{{request.session.language}}/detail/?id={{article.id}}&amp;page=1">{{article.title}}</a>
+                        <a href="/{{request.session.language|default:LANGUAGE_CODE}}/detail/?id={{article.id}}&amp;page=1">{{article.title}}</a>
                     </h2></div>
                     <p>
                         {% trans '1さん'%}：{{article.user.username}}&nbsp;{{article.publish_time}}&nbsp;&nbsp;&nbsp;&nbsp;
@@ -75,7 +76,7 @@
                 {% for article in popular %}
                 {% if article.comments > 0 and article.read_count > 0%}
                 <li><h3>
-                    <a href="/{{request.session.language}}/detail/?id={{article.id}}&amp;page=1">・{{article.title}}</a>
+                    <a href="/{{request.session.language|default:LANGUAGE_CODE}}/detail/?id={{article.id}}&amp;page=1">・{{article.title}}</a>
                 </h3></li>
                 {% endif %}
                 {% endfor %}

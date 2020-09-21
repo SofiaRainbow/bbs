@@ -1,3 +1,8 @@
+URL:
+
+http://smilerainbow.pythonanywhere.com/en/home
+
+
 MySQL Command Line Client:
 
 `create database bbs_garbage charset utf8;`    
@@ -25,14 +30,16 @@ cond(no)->op
 
 #1.ホーム
 ## function:
-1. 登录/log in/
-    -first
+1. log in
+    - error message prompt
     
-2. 注册/sign up/
+2. sign up
+    * error message prompt
 3. 帖子分类/Category
 发帖
 回复
-
+分页
+国际化
 1.4 各帖子总数
 1.5 各分类今日发帖
 1.6 搜索帖子

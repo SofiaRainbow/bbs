@@ -4,18 +4,19 @@
 {% endblock css %}
 {% block main_content %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <div style="margin-top:55px;"></div>
 <div id="position" class="auto">
-    <a href='/{{request.session.language}}/home/'>{% trans 'ホーム'%}</a>
+    <a href='/{{request.session.language|default:LANGUAGE_CODE}}/home/'>{% trans 'ホーム'%}</a>
     &gt; <a href='#'>{{article.category.name}}</a>
      &gt;
 </div>
 <div id="main" class="auto">
     <div class="wrap1">
         {% if is_login %}
-        <a href="/{{request.session.language}}/reply/?article_id={{article.id}}" class="reply_btn">{% trans '返信'%}</a>
+        <a href="/{{request.session.language|default:LANGUAGE_CODE}}/reply/?article_id={{article.id}}" class="reply_btn">{% trans '返信'%}</a>
         {% else %}
-        <a class="reply_btn" href="/{{request.session.language}}/user/login/">{% trans '返信'%}</a>
+        <a class="reply_btn" href="/{{request.session.language|default:LANGUAGE_CODE}}/user/login/">{% trans '返信'%}</a>
         {% endif %}
         <div style="clear:both;"></div>
     </div>

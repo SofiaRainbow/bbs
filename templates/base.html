@@ -79,10 +79,10 @@
                 <div class="login">
                     {% if is_login %}
                     <a href="#">{{name}}</a>&nbsp;
-                        <a href="/{{request.session.language}}/user/login/">{% trans 'ログアウト'%}</a>
+                        <a href="/{{request.session.language|default:LANGUAGE_CODE}}/user/login/">{% trans 'ログアウト'%}</a>
                     {% else %}
-                        <a href='/{{request.session.language}}/user/login/'>{% trans 'ログイン'%}</a>&nbsp;
-                        <a href='/{{request.session.language}}/user/register/'>{% trans 'サインアップ'%}</a>
+                        <a href='/{{request.session.language|default:LANGUAGE_CODE}}/user/login/'>{% trans 'ログイン'%}</a>&nbsp;
+                        <a href='/{{request.session.language|default:LANGUAGE_CODE}}/user/register/'>{% trans 'サインアップ'%}</a>
                     {% endif %}
                 </div>
             </div>

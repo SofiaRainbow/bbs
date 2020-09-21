@@ -4,9 +4,10 @@
 {% endblock css %}
 {% block main_content %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE%}
 <div style="margin-top:55px;"></div>
 <div id="position" class="auto">
-    <a href='/home/'>{% trans 'ホーム'%}</a> &gt; <a href="/home/list/?cat_id={{category_id}}&amp;page=1">{{category_name}}</a>
+    <a href='/{{request.session.language|default:LANGUAGE_CODE}}/home/'>{% trans 'ホーム'%}</a> &gt; <a href="/{{request.session.language|default:LANGUAGE_CODE}}/home/list/?cat_id={{category_id}}&amp;page=1">{{category_name}}</a>
 </div>
 <div id="publish">
     <form action="{% url 'save_list' category_id %}" method="post">
