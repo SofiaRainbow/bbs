@@ -10,6 +10,19 @@ PyCharm terminal:
 Chrome Browser:
 http://127.0.0.1:8000/ja/home/
 
+### Flowchart
+```flow
+st=>start:用户登录
+op=>operation:登录操作
+cond=>condition:登陆成功
+e=>end:进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+[=========]
+
 #1.ホーム
 ## function:
 1. 登录/log in/
