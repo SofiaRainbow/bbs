@@ -23,7 +23,7 @@ http://127.0.0.1:8000/ja/home/
 
 The aim of the project is to contribute to help students who have questions about their homework.
 They can ask questions about unknown things and also answer the questions to help other students.
-At the meantime, teachers will supervise them and give them some advice.
+In the meantime, teachers will supervise them and give them some advice.
 
 ### The main function of the project:
 
