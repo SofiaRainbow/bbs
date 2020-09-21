@@ -1,8 +1,21 @@
+MySQL Command Line Client:
+create database bbs_garbage charset utf8;
+
+PyCharm terminal:
+python manage.py migrate;
+python manage.py runserver
+
+Chrome Browser:
+http://127.0.0.1:8000/ja/home/
+
 #1.ホーム
 ## function:
-1.1 登录
-1.2 注册
-1.3 各帖子分类
+1. 登录/log in/
+2. 注册/sign up/
+3. 帖子分类/Category
+发帖
+回复
+
 1.4 各帖子总数
 1.5 各分类今日发帖
 1.6 搜索帖子
