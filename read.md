@@ -1,9 +1,9 @@
 MySQL Command Line Client:
-create database bbs_garbage charset utf8;
+    create database bbs_garbage charset utf8;    
 
 PyCharm terminal:
-python manage.py migrate;
-python manage.py runserver
+    python manage.py migrate
+    python manage.py runserver
 
 Chrome Browser:
 http://127.0.0.1:8000/ja/home/
@@ -11,6 +11,8 @@ http://127.0.0.1:8000/ja/home/
 #1.ホーム
 ## function:
 1. 登录/log in/
+    -first
+    
 2. 注册/sign up/
 3. 帖子分类/Category
 发帖
