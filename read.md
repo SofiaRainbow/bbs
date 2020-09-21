@@ -1,7 +1,9 @@
 MySQL Command Line Client:
-    create database bbs_garbage charset utf8;    
+
+`create database bbs_garbage charset utf8;`    
 
 PyCharm terminal:
+
     python manage.py migrate
     python manage.py runserver
 
