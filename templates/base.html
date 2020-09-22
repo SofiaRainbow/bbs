@@ -70,7 +70,7 @@
                 <div class="serarch">
                     <form method="post" action="{% url 'search_article'%}">
                         {% csrf_token %}
-                        <input class="keyword" type="text" name="keyword" placeholder="{% trans '検索'%}"/>
+                        <input class="keyword" type="text" name="keyword" placeholder="{% trans '検索'%}" value="{{keyword}}"/>
                         <input class="submit" type="submit" name="submit" value=""/>
                     </form>
                 </div>

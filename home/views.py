@@ -187,7 +187,7 @@ def save_reply(request, article_id):
 
 
 def search_article(request):
-    keyword = request.POST.get('keyword', '')
+    keyword = request.POST.get('keyword', '的')
     page_id = request.GET.get('page', 1)
     if keyword:
         articles = ArticleModel.objects.filter(title__contains=keyword)
@@ -197,7 +197,7 @@ def search_article(request):
     # page_data是Page对象 里面有当前页面的数据
     page_data = paginator.page(page_id)
     popular = articles.order_by('-read_count', '-comments')[:5]
-    context = {'popular': popular, 'page_data': page_data, 'paginator': paginator}
+    context = {'popular': popular, 'page_data': page_data, 'paginator': paginator, 'keyword': keyword}
     return render(request, 'search.html', context)
 
 
