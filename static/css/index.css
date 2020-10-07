@@ -1,3 +1,4 @@
+
 #bbs_info_box {
 	color: rgba(0, 0, 0, 0.6);
 }
@@ -105,4 +106,8 @@
 }
 #flink .flinkList a {
 	color:#333333;
+}
+body{
+    background:url(../image/hope.jpg) no-repeat;
+    background-size:cover;
 }
